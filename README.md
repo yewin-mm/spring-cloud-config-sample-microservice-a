@@ -38,7 +38,7 @@
 * Nowadays, We used spring cloud config for centralization for all configures at one place over `Git` call config repository (properties or yml files store). 
 * Also, we don't need to restart our application again if we changed something in our `application.properties` files or if we want to change something in that config file.
 * So, Spring Cloud Config is used for centralized configuration and used to change config at runtime collaborate with Spring boot Actuator build in `Refresh` api. 
-* This project is communicate with [Cloud Config Server](https://github.com/yewin-mm/spring-cloud-config-server) for fetching (pulling) config value through that server. <br> 
+* This project is communicate with [Cloud Config Server](https://github.com/yewin-mm/spring-cloud-config-server) for fetching (pulling) config value through that server <br> 
 and communicate with [Config Files Storage](https://github.com/yewin-mm/spring-cloud-config-files-storage) as for config files storage repository, and you can also see [Spring Cloud Config Sample Microservice B](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-b) as for another config sample client service. 
 
 <!-- TABLE OF CONTENTS -->
@@ -62,7 +62,7 @@ and communicate with [Config Files Storage](https://github.com/yewin-mm/spring-c
 <a name="about-the-project"></a>
 ## ⚡️About The Project
 This is Demo Project for Spring Cloud Config Sample Microservice A. <br>
-This service will fetch config properties from cloud [config server](https://github.com/yewin-mm/spring-cloud-config-server) and cloud config server get those properties files from [config files repository](https://github.com/yewin-mm/spring-cloud-config-files-storage) through `Git`. <br>
+This service will fetch config properties from [cloud config server](https://github.com/yewin-mm/spring-cloud-config-server) and cloud config server get those properties files from [config files repository](https://github.com/yewin-mm/spring-cloud-config-files-storage) through `Git`. <br>
 So, firstly, you need to put `application.properties` or `yml` for this application to `Github` or `Bitbucket` or you can even use your local config folder which already committed to local git repository. <br>
 Here, config file means your application require file like `application.properties` or `application.yml` file.
 
@@ -88,6 +88,7 @@ Click below links.
 * [Reading Values from Properties files](https://github.com/yewin-mm/reading-properties-file-values) (for reading values from properties files)
 * [Spring Profile](https://github.com/yewin-mm/spring-profile-properties-yml-file) (for knowing spring profiles)
 * [Config Files Store](https://github.com/yewin-mm/spring-cloud-config-files-storage) (for config file store)
+* [Cloud Config Server](https://github.com/yewin-mm/spring-cloud-config-server) (for config server)
 * [Spring Cloud Config Sample Microservice B](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-b) (for another sample config client)
 
 
