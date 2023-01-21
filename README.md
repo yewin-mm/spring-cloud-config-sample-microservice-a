@@ -134,42 +134,42 @@ You need to clone [Config Files Store](https://github.com/yewin-mm/spring-cloud-
 
 <a name="testing-config-server"></a>
 ##### Testing Config Server
-* Now, you can 'Test' Config Server by calling api from Postman.
+* Now, you can test Config Server by calling api from Postman.
 * Please note that your Config File Store directory is already git project as above [Setup Config file store](#setup-and-run-services) step.
 * Open `config-server` folder
   * Open `(build-in api) (service a) check properties (default profile)` api, click `send` button, you can see Service A default profile config values.
   * And this values is from `microservice-a.properties` file and which file under your cloned config file store directory.
-  * You can also check for another check properties APIs as per profile and I already dropped those APIs in that folder.
+  * You can also check for another check properties APIs `as per application profile` and I already dropped those APIs in that folder.
   * You can also check `encrypt` and `decrypt` APIs by adding test value in encrypt api, and you will get encrypted value, <br>
     and you can add that encrypted value in decrypt api and you will get decrypted value.
   * Those `encrypt` and `decrypt` APIs is just for testing encryption which will use in our config file store and config server as for security. <br>
     Because someone may get your config files, and he can easily get your secret credentials like server credentials.
   * Because in real world applications, you need to push your config file store in GitHub or Bitbucket.
   * That approach is because your real world running application in cloud server can't connect to your local config directory and so, you need to push your config repo to GitHub or Bitbucket.
-  * So, this config file store directory is just for testing in local laptop and even if you push your config file store in GitHub as repository, <br>
+  * So, this config file store directory is just for testing in local laptop and even if you push your config file store in GitHub as repository,
     your config server can fetch that config file directory well and I already dropped that sample cloud config file url in `application.properties` file of  config server too.
     
 <a name="testing-normal-config"></a>
 ##### Testing Normal Config
-* Now, you can 'Test' Normal Config by calling api from Postman.
+* Now, you can test Normal Config by calling api from Postman.
 * Please note that your Config File Store directory is already git project as above [Setup Config file store](#setup-and-run-services) step.
 * Open `client microservices-a` folder
   * Open `getValueByUsingValueAnnotation` api, click `send` button, you can see Service A config value. <br> That way is getting config value by using `@Value` annotation.
   * Surprisingly that config values are `not` from this `application.properties` file (you can change the value in this application.properties file for testing) <br> 
     and you will see that values are from `microservice-a-qa.properties` file under config file store directory.
   * So, this application take config values from `config file store` through `config server` over Git repository (because config file store have to be git project and need to be committed).
-  * You can also test by `changing spring profile` in this application.properties file, and you will see the values which are from config file store and there will be many files `as per profile`.
+  * You can also test by `changing spring profile` in this application.properties file like `default, dev, prod`, and you will see the values which are from config file store and there will be many files `as per profile`.
   * If you want to test for using this `application.properties` file, you can stop config server and call this API again.
   * You can also test for `getValueByUsingConfigProperties` api, click `send` button, you can see Service A config value. <br> That way is getting config value by using `@ConfigurationProperties` annotation.
 
 <a name="testing-dynamic-config"></a>
 ##### Testing Dynamic Config
-* Now, you can 'Test' Dynamic Config by calling api from Postman.
+* Now, you can test Dynamic Config by calling api from Postman.
 * Please note that your Config File Store directory is already git project as above [Setup Config file store](#setup-and-run-services) step.
 * Open `client microservices-a` folder
 * Firstly, Run your project (if not run) and call `getValueByUsingValueAnnotation` or `getValueByUsingConfigProperties` api and see the values.
   * Go to config file store folder (directory). 
-  * Update some values in properties file which need to be same with your running spring profile, <br> 
+  * Update some values in properties file and save that file which file need to be same with your running spring profile, <br> 
     eg. if you run your application with `QA` profile, you need to update some values in `microservice-a-qa.properties` file.
   * Commit into Git.
     * Go to config file store folder (directory) with `CMD` or `terminal`.
@@ -181,6 +181,13 @@ You need to clone [Config Files Store](https://github.com/yewin-mm/spring-cloud-
   * Call `getValueByUsingValueAnnotation` or `getValueByUsingConfigProperties` api again and see the values.
   * There, you will see your updated values can be seen.
   * That's mean you will get your updated config values without restarting the application.
+  * You can also check for another profile,
+    * Stop this application and change profile (eg. prod) and run.
+    * Call getValue API and see the values,
+    * Update some values in properties file as per your profile. 
+    * eg. if you run with `prod` profile, you need to update value in `microservice-a-prod.properties` file. 
+    * Save that file and commit.
+    * Call `Refresh` Api and call `getValue` API again. You will see your updated values as per profile file.
   * You can also check build-in actuator `health` and `env` api.
 
 * That's what we call Spring Cloud Config, 
