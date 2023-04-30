@@ -56,6 +56,7 @@ and communicate with [Config Files Storage](https://github.com/yewin-mm/spring-c
           -  [Testing Normal Config](#testing-normal-config)
           -  [Testing Dynamic Config](#testing-dynamic-config)
 - [Contact Me](#contact)
+- [Becoming a Sponsor](#becoming-a-sponsor)
 - [Contributing](#Contributing)
 
 
@@ -69,7 +70,7 @@ Here, config file means your application require file like `application.properti
 <a name="built-with"></a>
 ### 🪓 Built With
 This project is built with
-* [Java](https://www.oracle.com/au/java/technologies/javase/javase-jdk8-downloads.html)
+* [Java](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
 * [Maven](https://maven.apache.org/download.cgi)
 * [Cloud Config Server](https://github.com/yewin-mm/spring-cloud-config-server)
 
@@ -208,10 +209,18 @@ You need to clone [Config Files Store](https://github.com/yewin-mm/spring-cloud-
 
 
 <a name="contact"></a>
-## ✉️ Contact
-Name - Ye Win <br> LinkedIn profile -  [Ye Win's LinkedIn](https://www.linkedin.com/in/ye-win-1a33a292/)  <br> Email Address - yewin.mmr@gmail.com
+## ✉️ Contact Me
+Name - Ye Win <br> LinkedIn profile -  [Ye Win](https://www.linkedin.com/in/ye-win-1a33a292/)  <br> Email Address - <a href="mailto:yewin.mmr@gmail.com?">yewin.mmr@gmail.com</a> <br> WhatsApp - [+959252656065](https://wa.me/959252656065?text=Hi) <br> Website - [My Website](https://yewin.me/)
 
 Project Link: [Spring Cloud Config Sample Microservice A](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-a)
+
+
+<a name="becoming-a-sponsor"></a>
+## 🥰 Becoming a Sponsor
+If you like any of my projects or if you want to support my work, please kindly consider becoming a sponsor. <br>
+It gives me great motivation and I can relentlessly maintain my projects and contribute to the open-source community.
+
+<a href="https://www.buymeacoffee.com/yewin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150" ></a>
 
 
 <a name="contributing"></a>
